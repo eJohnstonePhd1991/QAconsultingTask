@@ -12,6 +12,6 @@ package ticketsystem;
 public class Student extends Ticket {
     Student(int amount, boolean discount){
         super(amount,discount);
-        this.ticketPrice = 6;
+        this.setPrice(6);
     }
 }

@@ -12,6 +12,6 @@ package ticketsystem;
 public class Oap extends Ticket {
     Oap(int amount, boolean discount){
         super(amount, discount);
-        this.ticketPrice = 6;
+        this.setPrice(6);
     }
 }

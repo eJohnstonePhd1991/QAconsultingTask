@@ -1,0 +1,108 @@
+Encapsulation:
+
+Encapsulation is the process of restricting access of information inside objects
+to the outside. Doing so helps avoid bugs via "side effects" i.e. 
+that variables don't get altered accidentally. It also helps keep the code
+reusable, easy to test and easy to read.
+
+eg
+
+public class Test {
+
+private String name 
+
+ public String getName(){
+  return name;
+ }
+
+ public void setName(String str){
+  this.name = str;
+}
+}
+
+Test test = new Test();
+test.setName("Bob");
+test.getName(); // should return "Bob";
+
+The set/getName methods are the only way of reading/writing the 
+object variable "name", trying to access it directly via test.name will
+result in an error.
+
+
+
+Inheritance:
+
+In Object orientate programming you can create classes which inherint properties
+and methods from another class, creating a "subclass".
+
+eg
+
+class Snake {
+
+ void slither(){
+  // moves around
+ }
+}
+
+class Cobra extends Snake {
+ void spit(){
+
+  }
+}
+
+Here, Cobra has both the slither() and spit() methods.
+
+
+Polymorphism:
+
+Polymorphism is a broad concept that describes methods that can peform
+different functions depending on what they are acting in.
+
+One common version of this is when a subclass changes or extends a
+method from it's parent class i.e.
+
+class Animal{
+ void sound(){
+   System.out.println("Animal makes a sound");
+ }
+}
+
+class Cow extends Animal{
+
+ void sound(){
+  System.out.println("Moo!");
+  }
+}
+
+Another version is when a method can handle different numbers of arguments,
+called "method overloading"
+
+e.g
+
+int addNumber(int a,int b){
+ return a + b;
+}
+
+int addNumber(int a, int b, int c){
+ return a + b + c;
+}
+
+Abstraction:
+
+In Java, you have the ability to create classes which are "abstract"
+which means that you cannot create an instance(object) of this class.
+This class serves only as a template for other non-abstract classes.
+You can also create abstract methods within abstract classes, 
+which can only be implemented by subclasses.
+
+example:
+
+abstract class Animal{
+   abstract void move();
+}
+
+class Cat extends Animal{
+  void move(){
+   //describe how a cat moves	
+  }
+}

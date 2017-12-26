@@ -12,6 +12,6 @@ package ticketsystem;
 public class Child extends Ticket {
     Child(int amount,boolean discount){
         super(amount,discount);
-        this.ticketPrice = 4;
+        this.setPrice(4);
     }
 }

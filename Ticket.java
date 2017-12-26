@@ -10,9 +10,9 @@ package ticketsystem;
  * @author Gabriel
  */
 public abstract class Ticket {
-    int ticketPrice;
-    int ticketAmount;
-    int reduction = 2;
+    private int ticketPrice;
+    private int ticketAmount;
+    private int reduction = 2;
     boolean discount;
     
     public Ticket(int amount, boolean discount){
@@ -27,6 +27,10 @@ public abstract class Ticket {
         else{
             return ticketPrice;
         }
+    }
+    
+    void setPrice(int price){
+        this.ticketPrice = price;
     }
     
     int getTotal(){
